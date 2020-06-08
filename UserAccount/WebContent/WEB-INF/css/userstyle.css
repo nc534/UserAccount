@@ -1,0 +1,34 @@
+header {
+	background-color: #76b852;
+	width: 100%;
+	padding: 50px;
+}
+
+body {
+	background-color: #FFFFFF;
+}
+
+h1 {
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 50px;
+}
+
+input[type=submit] {
+  	font-family: "Roboto", sans-serif;
+  	background: #ff9000;
+ 	width: 10%;
+  	border: 0;
+  	padding: 15px;
+  	color: #FFFFFF;
+  	font-size: 14px;
+  	cursor: pointer;
+}
+
+footer {
+	background-color: #76b852;
+	width: 100%;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+}
