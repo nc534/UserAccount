@@ -9,7 +9,7 @@ public class UserAccountConnection {
 
 	private static final String URL = "jdbc:mysql://localhost:3306/useraccount?useSSL=false";
 	private static final String user = "root";
-	private static final String password = "rootroot";
+	private static final String password = "********"; //password would depend on what you set up with
 	
 	public static Connection getConnection(){
       
