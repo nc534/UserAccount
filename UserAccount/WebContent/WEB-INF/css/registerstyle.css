@@ -14,6 +14,11 @@ table {
   	background-color: #FFFFFF;
 }
 
+.error {
+	font-family: "Roboto", sans-serif;
+	color: #FF0000;
+}
+
 td {
 	
 	font-family: "Roboto", sans-serif;
