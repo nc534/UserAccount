@@ -1,3 +1,5 @@
+CREATE SCHEMA `useraccount` ;
+
 use useraccount;
 
 drop table if exists user;
