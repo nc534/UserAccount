@@ -12,6 +12,9 @@
 		<h1>Welcome!</h1>
 		
 		<form action="<%= request.getContextPath() %>/login" method="post">
+			<div class="error">${errorMessage}</div>
+			<div class="message">${Message}</div>
+			<br>
 			<table style="text-align: center">
 				<tr>
 					<td><input type="text" name="username" placeholder="username"/></td>
