@@ -25,7 +25,7 @@ Softwares used and embedded links to how to install them.
 1. Download project zip file, open zip folder, open UserAccount-master folder, extract UserAccount and open project folder in Eclipse
 2. Right click project folder -> Properties-> Project Facets -> Convert to faceted form... -> Dynamic Web Module & Java -> Apply and Close
 3. Right click project folder -> Build Path -> Configure Build Path... -> Classpath -> Add External JARs -> your Tomcat folder (ex: C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib)-> servlet-api.jar -> Open -> Apply and Close
-4. Create local connection on MySQL with a useraccount schema. Paste and run sql code.
+4. Create local connection on MySQL and open connection. Paste and run sql code.
 5. Edit connection file (UserAccountConnection.java) password in Eclipse
 6. Right click project folder -> Run As -> Run on Server -> Finish
 
