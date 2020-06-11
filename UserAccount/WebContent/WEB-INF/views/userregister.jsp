@@ -12,6 +12,8 @@
 		<h1>Create an Account</h1>
 		
 		<form action="<%= request.getContextPath() %>/register" method="post">
+			<div class="error">${errorMessage}</div>
+			<br>
 			<table style="text-align: center">
 				<tr>
 					<td>First Name </td>
