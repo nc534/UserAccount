@@ -30,9 +30,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		PrintWriter out = response.getWriter();
-		
+
 		//get the username and password inputted in text box
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -58,12 +56,10 @@ public class LoginServlet extends HttpServlet {
 		
 			}else {
 				
-				//send user to login page
-				out.print("Wrong username and password. If you don't have an account, please register.");
-				request.getRequestDispatcher("/WEB-INF/views/login.jsp").include(request, response);  
+				//send user to login page with error message
+				request.setAttribute("errorMessage", "Wrong username and password. If you don't have an account, please register.");
+				request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);   
 			}
-			
-			out.close();
 			
 		}catch (ClassNotFoundException e) {
 			e.printStackTrace();
