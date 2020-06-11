@@ -38,9 +38,7 @@ public class RegisterServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		Boolean userExists = false;
-		
-		PrintWriter out = response.getWriter();
-		
+
 		User user = new User();
 		
 			user.setFirstname(firstName);
@@ -65,20 +63,19 @@ public class RegisterServlet extends HttpServlet {
 			}
 		}
 		
-		//if the username or email is already taken, go back to login page without adding new user, else, new user is created and sent back to login
+		//if the username or email is already taken, display error without adding new user, else, new user is created and sent back to login
 		if (userExists == true) {
 			
-			out.print("Username or Email already exists.");
-			request.getRequestDispatcher("/WEB-INF/views/login.jsp").include(request, response); 
+			request.setAttribute("errorMessage", "Username or Email already exists");
+			request.getRequestDispatcher("/WEB-INF/views/userregister.jsp").forward(request, response); 
 			
 		}else {
 		
-			out.print("Account created.");
-			request.getRequestDispatcher("/WEB-INF/views/login.jsp").include(request, response);  
+			request.setAttribute("Message", "Account Created");
+			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);  
 			
 		}
-		
-		out.close();
+
 	}
 
 }
